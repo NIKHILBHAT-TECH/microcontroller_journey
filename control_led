@@ -1,0 +1,26 @@
+void setup() {
+  Serial.begin(115200);
+  pinMode(2, OUTPUT);
+  digitalWrite(2, LOW);  // start OFF
+  Serial.println("Type 'on' or 'off' and press Enter");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    String command = Serial.readStringUntil('\n');
+    command.trim();
+    command.toLowerCase();
+
+    if (command == "on") {
+      digitalWrite(2, HIGH);  // HIGH = ON
+      Serial.println("LED ON");
+    } 
+    else if (command == "off") {
+      digitalWrite(2, LOW);   // LOW = OFF
+      Serial.println("LED OFF");
+    } 
+    else {
+      Serial.println("Unknown command: " + command);
+    }
+  }
+}
