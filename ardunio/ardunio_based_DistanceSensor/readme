@@ -1,2 +1,3 @@
-# Arduino-Based Distance Sensor 
-using ultra sonic sensor distance between the sensor and the object is being displayed in serial monitor
+Arduino-Based Distance Sensor :
+                               Using ultra sonic sensor distance between the sensor and the object
+                               is measured and being displayed in serial monitor.
